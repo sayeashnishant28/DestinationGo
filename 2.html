@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Go</title>
+    <style>
+        /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: auto;
+    overflow: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(315deg, rgba(101, 0, 94, 1) 3%, rgba(60, 132, 206, 1) 38%, rgba(48, 238, 226, 1) 68%, rgba(255, 25, 25, 1) 98%);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: gradient 15s ease infinite;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+.main {
+    margin-top: 80px; /* Adjust based on navbar height */
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background-color: #e8caca;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card:hover {
+    height: 400px;
+    width: 300px;
+}
+
+.card .imgBx {
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card:hover .imgBx {
+    top: -100px;
+    transform: scale(0.75);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.card .content h2 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+button {
+    width: 90px;
+    height: 30px;
+    background-color: cornsilk;
+    border-radius: 50px;
+    font-style: oblique;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Waves animation */
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+    </style>
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <div>
+            <h3 style="color:white;">Destination Go</h3>
+        </div>
+        <div>
+            <a href="package-booking.html">Package Booking</a>
+            <a href="package-details.html">Package Details</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="main">
+        <center>
+            <h1 id="a">DESTINATION GO</h1>
+        </center>
+        <div class="container">
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://wallpapercave.com/wp/wp4491433.jpg" alt="">
+                </div>
+                <div class="content">
+
+                    <h2> SUMMER SEASON</h2><br>
+                    <a href="summer.html">
+                        <button type="button">Click Me!</button>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/bd/d1/fc/sajek.jpg?w=300&h=300&s=1"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2> WINTER SEASON</h2><br>
+                    <a href="winter.html">
+                        <button type="button">Click Me!</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://travelobiz.com/wp-content/uploads/2020/06/Best-Places-To-Visit-In-India.jpg"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2> MUST VISIT</h2><br>
+                    <a href="must.html">
+                        <button type="button">Click Me!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

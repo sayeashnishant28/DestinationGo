@@ -1,0 +1,308 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+    <title>web page</title>  
+  
+<style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+h1 {
+    
+     text-align: center;
+   
+    height: 50px;
+
+    margin-bottom: 10px;
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1; /* Ensure content is above the waves */
+}
+
+.item {
+    font-style: italic;
+    font-size: medium;
+    border: 1px solid gray;
+    height: 470px;
+    width: calc(33.33% - 40px);
+    margin-bottom: 20px;
+    padding: 10px;
+    flex-grow: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(100, 145, 115, 0.5), rgba(219, 213, 164, 0.5));
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Zoom in effect */
+}
+
+
+
+.item:hover {
+    transform: scale(1.05); /* Zoom in effect */
+}
+
+#cart {
+    margin-top: 5px;
+    margin-left: calc(50% - 50px); 
+    font-weight: 200;
+    height: 30px;
+    width: 120px;
+    font-style: inherit;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cart:hover {
+    background-color: #7ca68a;
+    color: white;
+}
+
+#img {
+    margin: 10px auto; 
+    display: block; 
+}
+
+span {
+    padding-left: 10px;
+}
+
+.price {
+    width: 60px;
+    height: 30px;
+    background-color: #e23737;
+    text-align: center;
+    align-items: center;
+    padding-top: 5px;
+    border-radius: 15px;
+    margin-left: 280px;
+    position: static;
+    animation: blink 1s infinite; /* Add animation */
+}
+
+@keyframes blink {
+    0%, 70% {
+        background-color: #e23737;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
+h4 {
+    margin-left: 290px;
+}
+
+.det {
+    width: 355px;
+    height: 110px;
+    background-color: #6e9d7e;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+/* Wave Animation */
+body {
+    background: linear-gradient(to right, #5d876b, #f1ebbd);
+     /* Prevent scrollbars due to animation */
+}
+
+.wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg');
+    background-size: 1000px 200px;
+    z-index: -1; /* Make sure the waves are behind the content */
+}
+
+@keyframes wave-animation {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.wave1 {
+    opacity: 0.5;
+    animation: wave-animation 10s linear infinite;
+}
+
+.wave2 {
+    opacity: 0.4;
+    animation: wave-animation 15s linear infinite reverse;
+}
+
+.wave3 {
+    opacity: 0.3;
+    animation: wave-animation 20s linear infinite;
+}
+h2{
+    color:#f1ebbd ;
+}
+
+.b{
+    padding-bottom: 20px;
+}
+.home{
+    color: black;
+    margin-left: 30px;
+    font-size: 30px;
+}
+.home:hover{
+    color:#f1ebbd;
+}
+</style>  
+</head>  
+<body>  
+    <h1 id="a">SUMMER SEASON LOCATIONS</h1> 
+    <div class="b">
+    <a href="2.html" class="home">
+        <i class="fas fa-home"></i>
+    </a>
+</div>
+    <div class="cont">  
+        <div class="item">  
+          <h2>1.Kashmir </h2>  
+          <img src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/kashmir.webp" id="img" height="170px" width="300px"> 
+          <div class="det">
+          <h3>Details</h3>
+            <span>Everyone who visits Kashmir, a gem of winter beauty nestled in the Himalayas, returns home with fond memories.</span><br><br>
+            </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>  
+            <a href="kashmir.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>2. Darjeeling:</h2>  
+            <img src="https://c.myholidays.com/blog/blog/content/images/2021/01/Darjeeling.webp" id="img" height="170px" width="280px"> 
+            <div class="det">
+                <h3>Details</h3>
+            <span>Nestled away in the pristine mountains and the rolling valleys of Himalayas, Darjeeling in the North East India is one of the least explored and beautiful places.</span>  
+        </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p> 
+            <a href="darjel.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>3. Cherrapunji: Delve into Mystic Waterfalls</h2>  
+            <img src="https://c.myholidays.com/blog/blog/content/images/2021/02/Cherrapunji.webp" id="img" height="150px" width="300px">
+            <div class="det">
+                <h3>Details</h3>
+            <span>Dominated by the green hills and the cascading waterfalls, the town is perfect to enjoy the rain showers.</span>  
+        </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p> 
+            <a href="cherapunjji.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>4. Rani Khet: Queen Farm in the Himalayan Foothills</h2>  
+            <img src="https://c.myholidays.com/blog/blog/content/images/2021/02/Rani-Khet--Uttarakhand.webp" id="img" height="165px" width="300px">
+            <div class="det">
+                <h3>Details</h3>
+            <span>Enclosed within the serene beauty of nature, the rolling hills, Devdare forests, and more, the city is often referred to as the Queens Fram.</span>  
+        </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>  
+            <a href="rani.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>5.GOA</h2>  
+            <img src="https://c.myholidays.com/blog/blog/content/images/2021/04/Goa.webp" id="img" height="170px" width="300px">  
+            <div class="det">
+                <h3>Details</h3>
+            <span>Goa Carnival is one of the most popular festivals in Goa. Best seafood, the trendy bars, beach shacks, cafes, and clubs along with the discotheques.</span>  
+        </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>  
+            <a href="goa.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+                </div>
+        <div class="item">  
+            <h2>6. Andaman: Explore the Underwater World</h2>  
+            <img src="https://c.myholidays.com/blog/blog/content/images/2021/04/Andaman.webp" id="img" height="165px" width="300px"> 
+            <div class="det">
+                <h3>Details</h3>
+            <span>Andaman is an island known for its shimmering beaches, the lagoon of turquoise blue waters, and history.</span>  
+        </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>
+            <a href="andaman.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>7. Mahabaleshwar: Undertake a Journey to the Western Ghats </h2>  
+            <img src="https://c.myholidays.com/blog/2024/3/281742_Mahabaleshwar-ezgif.com-jpg-to-webp-converter%20(2).webp" id="img" height="170px" width="300px"> 
+            <div class="det">
+                <h3>Details</h3> 
+            <span>Mahabaleshwar is renowned for its many overlooks.</span>  
+                </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>
+            <a href="mahabaleswaram.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>8.Udaipur: Embark on a Tour to City of Lakes</h2>  
+            <img src="https://c.myholidays.com/blog/blog/content/images/2021/04/Udaipur.webp" id="img" height="170px" width="300px"> 
+            <div class="det">
+                <h3>Details</h3>
+            <span>Known as the crown gem of the state of Rajasthan.</span>  
+              </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>
+            <a href="udaipur.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>9.Majuli: Discover the Largest River Island in the World </h2>  
+            <img src="https://c.myholidays.com/blog/2024/3/281751_Majuli-ezgif.com-jpg-to-webp-converter.webp" id="img" height="165px" width="300px">
+            <div class="det">
+                <h3>Details</h3>  
+            <span>Majuli, the biggest river island in the world and a distinctive cultural, biological hotspot.</span>  
+            </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>
+            <a href="majuli.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>  
+        </div>  
+     </div> 
+
+    <!-- Wave Elements -->
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div> 
+     
+</body>  
+</html>

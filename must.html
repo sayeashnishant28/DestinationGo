@@ -1,0 +1,307 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+    <title>web page</title>  
+  
+<style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+h1 {
+    
+     text-align: center;
+   
+    height: 50px;
+
+    margin-bottom: 10px;
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1; /* Ensure content is above the waves */
+}
+
+.item {
+    font-style: italic;
+    font-size: medium;
+    border: 1px solid gray;
+    height: 480px;
+    width: calc(33.33% - 40px);
+    margin-bottom: 20px;
+    padding: 10px;
+    flex-grow: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(100, 145, 115, 0.5), rgba(219, 213, 164, 0.5));
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Zoom in effect */
+}
+
+
+
+.item:hover {
+    transform: scale(1.05); /* Zoom in effect */
+}
+
+#cart {
+    margin-top: 5px;
+    margin-left: calc(50% - 50px); 
+    font-weight: 200;
+    height: 30px;
+    width: 120px;
+    font-style: inherit;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cart:hover {
+    background-color: #7ca68a;
+    color: white;
+}
+
+#img {
+    margin: 10px auto; 
+    display: block; 
+}
+
+span {
+    padding-left: 10px;
+}
+
+.price {
+    width: 60px;
+    height: 30px;
+    background-color: #e23737;
+    text-align: center;
+    align-items: center;
+    padding-top: 5px;
+    border-radius: 15px;
+    margin-left: 280px;
+    position: static;
+    animation: blink 1s infinite; /* Add animation */
+}
+
+@keyframes blink {
+    0%, 70% {
+        background-color: #e23737;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
+h4 {
+    margin-left: 290px;
+}
+
+.det {
+    width: 355px;
+    height: 130px;
+    background-color: #6e9d7e;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+/* Wave Animation */
+body {
+    background: linear-gradient(to right, #5d876b, #f1ebbd);
+     /* Prevent scrollbars due to animation */
+}
+
+.wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg');
+    background-size: 1000px 200px;
+    z-index: -1; /* Make sure the waves are behind the content */
+}
+
+@keyframes wave-animation {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.wave1 {
+    opacity: 0.5;
+    animation: wave-animation 10s linear infinite;
+}
+
+.wave2 {
+    opacity: 0.4;
+    animation: wave-animation 15s linear infinite reverse;
+}
+
+.wave3 {
+    opacity: 0.3;
+    animation: wave-animation 20s linear infinite;
+}
+h2{
+    color:#f1ebbd ;
+}
+
+.b{
+    padding-bottom: 20px;
+}
+.home{
+    color: black;
+    margin-left: 30px;
+    font-size: 30px;
+}
+.home:hover{
+    color:#f1ebbd;
+}
+</style>  
+</head>  
+<body>  
+    <h1 id="a">MUST VISIT PLACES</h1> 
+    <div class="b">
+        <a href="2.html" class="home">
+            <i class="fas fa-home"></i>
+        </a>
+    </div> 
+    <div class="cont">  
+        <div class="item">  
+          <h2>1.Taj Mahal </h2>  
+          <img  src="https://th.bing.com/th/id/OIP.UcSa5Yb1XhvO7XF3Mpw-ogHaEo?w=295&h=184&c=7&r=0&o=5&dpr=2&pid=1.7" id="img" height="145px" width="300px">  
+          <div class="det">
+            <h3>Details</h3>
+            <span>The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra, Uttar Pradesh, India. It was commissioned in 1631 by the fifth Mughal emperor, Shah Jahan to house the tomb of his beloved wife.</span>  
+           </div>
+           <h4>Price</h4>
+           <p class="price">299/-</p>  
+            <a href="taj.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+               
+        </div>  
+        <div class="item">  
+            <h2>2. Mysore palace:</h2>  
+            <img src="https://karnatakatourism.org/wp-content/uploads/2020/06/Mysuru-Palace-banner-1920_1100.jpg" id="img" height="145px" width="280px">  
+            <div class="det">
+                <h3>Details</h3>
+            <span>Mysore Palace, also known as Amba Vilas Palace, is a historical palace and a royal residence. It is located in Mysore, Karnataka, India. It used to be the official residence of the Wadiyar dynasty and the seat of the Kingdom. </span>  
+        </div>
+        <h4>Price</h4>
+        <p class="price">299/-</p>  
+            <a href="mysore.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>3. Sun temple</h2>  
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwBta32rw-0q_RAa5wCzbaKvHUbXU6kixUfQ&s" id="img" height="145px" width="300px" > 
+            <div class="det">
+                <h3>Details</h3>
+            <span>:A sun temple is a building used for religious or spiritual activities, such as prayer and sacrifice, dedicated to the sun or a solar deity. Such temples were built by a number different cultures and are distributed around.</span>  
+        </div>
+        <h4>Price</h4>
+        <p class="price">299/-</p>   
+            <a href="sun.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>   
+                  
+        </div>  
+        <div class="item">  
+            <h2>4. Brihadeeswara Temple</h2>  
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwgUDEpnzVHdFlQ7Laj2am-NclAhD2Z2f-3Q&s" id="img" height="145px" width="300px">
+            <div class="det">
+                <h3>Details</h3>
+            <span>Brihadishvara Temple, called Rajarajesvaram by its builder, and known locally as Thanjai Periya Kovil and Peruvudaiyar Kovil, is a Shaivite Hindu temple built in a Chola architectural style located on the south bank. </span>  
+        </div>
+        <h4>Price</h4>
+        <p class="price">299/-</p>   
+            <a href="Brihadeeswara.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>  
+        </div>  
+        <div class="item">  
+            <h2>5.Hawa Mahal</h2>  
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Y_AuvnL29ORoVdgtqk4Qlk2ZwORC2LZiWA&s" id="img" height="145px" width="300px"> 
+            <div class="det">
+                <h3>Details</h3>
+            <span>The Hawa Mahal is a palace in the city of Jaipur, Rajasthan, India. Built from red and pink sandstone, it is on the edge of the City Palace, Jaipur, and extends to the Zenana, or women's chambers.  </span>  
+        </div>
+        <h4>Price</h4>
+        <p class="price">299/-</p>  
+            <a href="hawa.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>6. Qutub Minar</h2>  
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlVXFUUnvkvkcMLI3zUjJsigVpEcWYvS18mA&s" id="img" height="145x" width="300px"> 
+            <div class="det">
+                <h3>Details</h3>
+            <span>dThe Qutb Minar, also spelled Qutub Minar and Qutab Minar, is a minaret and "victory tower" that forms part of the Qutb complex, which lies at the site of Delhi's oldest fortified city, Lal Kot.</span>  
+        </div>
+        <h4>Price</h4>
+        <p class="price">299/-</p>  
+            <a href="qutub.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>   
+        </div>  
+        <div class="item">  
+            <h2>7. Shree Mukteswara Temple </h2>
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQC5KL0J6Kzd9sGSJyMzRdNPcIooMt2GLY5AyjCNfBoUhLkhhJPhHtrbWy-GdxNWVp_J8gBoFlDTEJEFmUHve4RS3_bnvywshDO9FEK8o8" id="img" height="145px" width="300px">  
+            <div class="det">
+                <h3>Details</h3>
+            <span>Mukteshwara Temple is a 10th-century Hindu temple dedicated to Shiva located in Bhubaneswar, Odisha, India. The temple dates back to 950–975 CE and is a monument of important.</span>  
+        </div>
+        <h4>Price</h4>
+        <p class="price">299/-</p>  
+            <a href="shreemuktheswara.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>8.Victoria Memorial</h2>  
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGxiYhidlcxUcnG9gbMSqmew3UJpwvUc_sTQ&s" id="img" height="145px" width="300px">
+            <div class="det">
+                <h3>Details</h3>
+            <span>Dedicated to Queen Victoria of England, it was constructed between 1906 and 1921 by the then Prince of Wales (who went on to become King George V). Today, the memorial has been turned into a museum.</span>  
+        </div>
+        <h4>Price</h4>
+        <p class="price">299/-</p>  
+            <a href="victoria.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>   
+        </div>  
+        <div class="item">  
+            <h2>9.GOLDEN PAGODA </h2>  
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuMl8ccMp4lDuLK_VNaqTJP8mZ41mx55UG_g&s" id="img" height="145px" width="300px"> 
+            <div class="det">
+                <h3>Details</h3> 
+            <span>The Golden Pagoda of Namsai, also known as Kongmu Kham, in the Tai-Khamti language, is a Burmese-style Buddhist temple that was opened in 2010. It is located on a 20 hectares complex in Namsai District.</span>  
+        </div>
+        <h4>Price</h4>
+        <p class="price">299/-</p>   
+            <a href="golden.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>   
+        </div>  
+     </div>  
+     <div class="wave wave1"></div>
+     <div class="wave wave2"></div>
+     <div class="wave wave3"></div>
+</body>  
+</html>

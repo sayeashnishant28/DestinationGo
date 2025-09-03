@@ -1,0 +1,304 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+    <title>web page</title>  
+  
+<style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+h1 {
+    
+     text-align: center;
+   
+    height: 50px;
+
+    margin-bottom: 10px;
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1; /* Ensure content is above the waves */
+}
+
+.item {
+    font-style: italic;
+    font-size: medium;
+    border: 1px solid gray;
+    height: 480px;
+    width: calc(33.33% - 40px);
+    margin-bottom: 20px;
+    padding: 10px;
+    flex-grow: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(100, 145, 115, 0.5), rgba(219, 213, 164, 0.5));
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Zoom in effect */
+}
+
+
+
+.item:hover {
+    transform: scale(1.05); /* Zoom in effect */
+}
+
+#cart {
+    margin-top: 5px;
+    margin-left: calc(50% - 50px); 
+    font-weight: 200;
+    height: 30px;
+    width: 120px;
+    font-style: inherit;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cart:hover {
+    background-color: #7ca68a;
+    color: white;
+}
+
+#img {
+    margin: 10px auto; 
+    display: block; 
+}
+
+span {
+    padding-left: 10px;
+}
+
+.price {
+    width: 60px;
+    height: 30px;
+    background-color: #e23737;
+    text-align: center;
+    align-items: center;
+    padding-top: 5px;
+    border-radius: 15px;
+    margin-left: 280px;
+    position: static;
+    animation: blink 1s infinite; /* Add animation */
+}
+
+@keyframes blink {
+    0%, 70% {
+        background-color: #e23737;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
+h4 {
+    margin-left: 290px;
+}
+
+.det {
+    width: 355px;
+    height: 130px;
+    background-color: #6e9d7e;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+/* Wave Animation */
+body {
+    background: linear-gradient(to right, #5d876b, #f1ebbd);
+     /* Prevent scrollbars due to animation */
+}
+
+.wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg');
+    background-size: 1000px 200px;
+    z-index: -1; /* Make sure the waves are behind the content */
+}
+
+@keyframes wave-animation {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.wave1 {
+    opacity: 0.5;
+    animation: wave-animation 10s linear infinite;
+}
+
+.wave2 {
+    opacity: 0.4;
+    animation: wave-animation 15s linear infinite reverse;
+}
+
+.wave3 {
+    opacity: 0.3;
+    animation: wave-animation 20s linear infinite;
+}
+h2{
+    color:#f1ebbd ;
+}
+
+.b{
+    padding-bottom: 20px;
+}
+.home{
+    color: black;
+    margin-left: 30px;
+    font-size: 30px;
+}
+.home:hover{
+    color:#f1ebbd;
+}
+</style>  
+</head>  
+<body>  
+    <h1 id="a">WINTER SEASON LOCATIONS</h1>  
+    <div class="b">
+        <a href="2.html" class="home">
+            <i class="fas fa-home"></i>
+        </a>
+    <div class="cont">  
+        <div class="item">  
+          <h2>1. Kashmir</h2>  
+          <img  src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/kashmir.webp" id="img" height="170px" width="300px"><br>  
+          <div class="det">
+          <h3>Details</h3>
+            <span>Everyone who visits Kashmir, a gem of winter beauty nestled in the Himalayas, returns home with fond memories. When Kashmir's landscapes are perfectly blanketed in snow and provide an amazing view in the winter, it has an unrivalled allure.  </span>  
+            </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>  
+            <a href="kashmir.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>  
+        </div>  
+        <div class="item">  
+            <h2>2. Tawang</h2>  
+            <img src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/tawang.webp" id="img" height="180px" width="280px"><br>  
+            <div class="det">
+                <h3>Details</h3>
+            <span>details  :Tawang, tucked away in the northeastern Himalayas, stands out as a hidden jewel that shines in all its splendour throughout the winter. This pristine retreat offers a singular fusion of natural beauty</span>  
+            </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>   
+            <a href="tawang.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>  
+        </div>  
+        <div class="item">  
+            <h2>3. Gangtok</h2>  
+            <img src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/gangtok.webp" id="img" height="180px" width="300px" ><br>  
+            <div class="det">
+                <h3>Details</h3>
+            <span>details  :The Gangtok trip packages enable guests to experience the charm of the neighbourhood markets, savour the cuisine, and learn about the hiking-friendly hills. </span>  
+              </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p> 
+            <a href="gangtok.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>4.Manali</h2>  
+            <img src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/manali.webp" id="img" height="170px" width="300px"><br>
+            <div class="det">
+                <h3>Details</h3>  
+            <span>details  : Manali, tucked away in the majestic Himalayas, attracts winter sports enthusiasts looking for an alluring retreat. Winter brings a new depth to Manali's attractiveness, changing it into a winter paradise</span>  
+           </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p> 
+            <a href="manali.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>   
+        </div>  
+        <div class="item">  
+            <h2>5.Auli</h2>  
+            <img src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/auli.webp" id="img" height="170px" width="300px"><br>  
+            <div class="det">
+                <h3>Details</h3>
+            <span>details  :Throughout the winter, Auli, a gem in the Garhwal Himalayas, displays its snow-covered slopes and exhilarating adventure options. With the snow-covered countryside, Auli attracts tourists like no other place.</span>  
+            </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>   
+            <a href="auli.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>6. Varanasi</h2>  
+            <img src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/varanasi.webp" id="img" height="170x" width="300px"><br>  
+            <div class="det">
+                <h3>Details</h3>
+            <span>details  :Varanasi, a revered spiritual centre, reveals its profound charm in winter depths, enticing pilgrims and wanderers. The fresh breeze that blows across the ghats along the Ganges reveals the spiritual soul of Varanasi</span>  
+             </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p>   
+            <a href="varanasi.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+        </div>  
+        <div class="item">  
+            <h2>7.Coorg</h2>  
+            <img src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/coorg.webp" id="img" height="170" width="300px"><br>
+            <div class="det">
+                <h3>Details</h3>  
+            <span>details  :The "Scotland of India," Coorg, a hidden gem that comes to life in the winter,is located in the Western Ghats. When the hills take on a magnificent hazy veil, Coorg's beauty takes on an ethereal nature that captivates the senses</span>  
+            </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p> 
+            <a href="coorg.html">
+                <button type="button" id="cart">See more..</button> 
+                </a> 
+                </div>
+        <div class="item">  
+            <h2>8.Dharamshala</h2>  
+            <img src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/jodhpur.webp" id="img" height="170px" width="300px"><br> 
+            <div class="det">
+                <h3>Details</h3> 
+            <span>details  :Dharamshala, tucked away in the foothills of the Himalayas, has developed into a haven for both spiritual seekers and lovers of the environment. The spiritual hub of Dharamshala, McLeod Ganj, attracts travellers worldwide </span>  
+               </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p> 
+            <a href="dharmasala.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>   
+        </div>  
+        <div class="item">  
+            <h2>9. Binsar</h2>  
+            <img src="https://www.tripplannersindia.com/assets/blog/images/winterplaces/binsar.webp" id="img" height="170px" width="300px"><br> 
+            <div class="det">
+                <h3>Details</h3> 
+            <span>The peaks covered in snow and the thick woodlands provide a tranquil setting for strolls and quiet times. At a height of 7,900 feet, Binsar's hilltop sanctuary offers panoramic views of the Himalayan range that are a visual feast.  </span>  
+             </div>
+            <h4>Price</h4>
+            <p class="price">299/-</p> 
+            <a href="binsar.html">
+                <button type="button" id="cart">See more..</button> 
+                </a>   
+        </div>  
+     </div>  
+     <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div> 
+</body>  
+</html>
